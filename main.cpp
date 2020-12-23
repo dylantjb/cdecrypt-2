@@ -465,7 +465,7 @@ s32 main( s32 argc, char*argv[])
 	char *CNT = ReadFile( str, &CNTLen );
 	if( CNT == (char*)NULL )
 	{
-		sprintf( str, "%08X", bs32(tmd->Contents[0].ID) );
+		sprintf( str, "%08X.app", bs32(tmd->Contents[0].ID) );
 		CNT = ReadFile( str, &CNTLen );
 		if( CNT == (char*)NULL )
 		{
@@ -553,7 +553,7 @@ s32 main( s32 argc, char*argv[])
 				FILE *cnt = fopen( str, "rb" );
 				if( cnt == NULL )
 				{
-					sprintf( str, "%08x", ContFileID );
+					sprintf( str, "%08x.app", ContFileID );
 					cnt = fopen( str, "rb" );
 					if( cnt == NULL )
 					{
